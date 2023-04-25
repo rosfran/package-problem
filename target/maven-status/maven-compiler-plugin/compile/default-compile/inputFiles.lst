@@ -1,0 +1,9 @@
+/Users/rosfranlinsborges/dev/Mobiquity/skeleton_java/src/main/java/com/mobiquity/packer/domain/Package.java
+/Users/rosfranlinsborges/dev/Mobiquity/skeleton_java/src/main/java/com/mobiquity/validation/ValidationStep.java
+/Users/rosfranlinsborges/dev/Mobiquity/skeleton_java/src/main/java/com/mobiquity/exception/ParserException.java
+/Users/rosfranlinsborges/dev/Mobiquity/skeleton_java/src/main/java/com/mobiquity/validation/ValidationResult.java
+/Users/rosfranlinsborges/dev/Mobiquity/skeleton_java/src/main/java/com/mobiquity/packer/Packer.java
+/Users/rosfranlinsborges/dev/Mobiquity/skeleton_java/src/main/java/com/mobiquity/packer/domain/PackageItem.java
+/Users/rosfranlinsborges/dev/Mobiquity/skeleton_java/src/main/java/com/mobiquity/exception/APIException.java
+/Users/rosfranlinsborges/dev/Mobiquity/skeleton_java/src/main/java/com/mobiquity/validation/DefaultPackageValidationService.java
+/Users/rosfranlinsborges/dev/Mobiquity/skeleton_java/src/main/java/com/mobiquity/validation/PackageValidationService.java

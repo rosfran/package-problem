@@ -27,6 +27,16 @@ For each set of items that you put into a package provide a new row in the outpu
 2,7 
 8,9
 
+## Components Diagram
+
+The Class Diagram is as following:
+
+- `com.mobiquity.packer.Packer`:  this is the main class for our API. We aim that the developer would call the method Packer.pack (passing a File path to the packaging scenarios, and getting a result as a String)
+- `com.mobiquity.packer.domain.Package`: it is a class describing the Package. A Package can be seen as a Bag, where you have the Package capacity (maximum amount of weights for all the itens), and a list of itens (called PackageItem)
+- `com.mobiquity.packer.domain.PackageItem`: it represents an item inside a Package. A PackageItem has: unique ID, weight and a cost.
+
+![uml-diagram](/Users/rosfranlinsborges/dev/Mobiquity/skeleton_java/docs/package-challenge.png)
+
 ## Implementation
 
 How to solve this problem with the best performance? This problem fits pretty well to the Knapsack solution. The decision problem form of the knapsack problem 
