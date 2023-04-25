@@ -50,7 +50,7 @@ public class DefaultPackageValidationService implements PackageValidationService
         public ValidationResult validate(Package command) {
 
             if (command.getCapacity() > MAX_CAPACITY) {
-                return ValidationResult.invalid(String.format("Maximum weight for a package is [%s].", MAX_CAPACITY));
+                return ValidationResult.invalid(String.format("Maximum weight for a package is [%s] but got [%s].", MAX_CAPACITY, command.getCapacity()));
             }
 
             return checkNext(command);
@@ -64,7 +64,7 @@ public class DefaultPackageValidationService implements PackageValidationService
 
         public ValidationResult validate(Package command) {
             if (command.getItems().size() > MAX_ITENS) {
-                return ValidationResult.invalid(String.format("Max itens size is %s", MAX_ITENS));
+                return ValidationResult.invalid(String.format("Max itens size is [%s], but got [%s]", MAX_ITENS, command.getItems().size()));
             }
             return checkNext(command);
         }
