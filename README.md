@@ -27,6 +27,10 @@ For each set of items that you put into a package provide a new row in the outpu
 2,7 
 8,9
 
+# Improvements on the Output
+
+It seems that on the last result the output provided was the best fit. If you choose an 8,9, as a result to accomplish a 56 capacity Package, you fit less than half of the available space on Package. The itens 6 and 9 are a better choice (closer to the value 56).
+
 ## Components Diagram
 
 The Class Diagram is as following:

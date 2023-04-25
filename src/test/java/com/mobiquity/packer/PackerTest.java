@@ -12,8 +12,8 @@ import java.nio.file.Paths;
 
 public class PackerTest {
     @Test
-    @DisplayName("Main case scenarios with capacities 81, 8, 75 e 56")
-    public void testMainCases() throws Exception
+    @DisplayName("Case scenario with Package capacities of 81, 8, 75 e 56")
+    public void testCaseScenario1() throws Exception
     {
         Path resourceDirectory = Paths.get("src","test","resources", "example_input");
         String absolutePath = resourceDirectory.toFile().getAbsolutePath();
@@ -26,11 +26,30 @@ public class PackerTest {
 
         Path resourceOutputFile = Paths.get("src","test","resources", "example_output");
 
-        assertNotEquals(result, Files.readString(resourceOutputFile));
+        assertNotEquals( Files.readString(resourceOutputFile), result);
 
         Path resourceOutputCorrectFile = Paths.get("src","test","resources", "example_output_correct");
 
-        assertEquals(result, Files.readString(resourceOutputCorrectFile));
+        assertEquals( Files.readString(resourceOutputCorrectFile), result);
+
+    }
+
+    @Test
+    @DisplayName("Case scenario with Package capacities of 31, 8, 75 e 56")
+    public void testCaseScenario2() throws Exception
+    {
+        Path resourceDirectory = Paths.get("src","test","resources", "example_input_2");
+        String absolutePath = resourceDirectory.toFile().getAbsolutePath();
+
+        assertTrue(absolutePath.endsWith("src/test/resources/example_input_2"));
+        assertTrue(resourceDirectory.toFile().length() > 0);
+        assertTrue(resourceDirectory.toFile().exists());
+
+        String result = Packer.pack(absolutePath);
+
+        Path resourceOutputCorrectFile = Paths.get("src","test","resources", "example_output_2");
+
+        assertEquals(Files.readString(resourceOutputCorrectFile), result);
 
     }
 

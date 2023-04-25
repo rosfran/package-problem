@@ -104,7 +104,7 @@ public class Packer {
                 continue;
             else {
                 // we keep adding the item's ID in the Set passed as a parameter
-                items.add(i - 1);
+                items.add(i );
 
                 /* iteratively, decreases the maximumCost and the actual weight, so in the next iteration
                  we keep trying to find all the itens */
@@ -157,7 +157,7 @@ public class Packer {
                                         }
                                     }
                                     return null;
-                                })
+                                }).filter( m -> m != null)
                                 .collect(toList()));
 
                         /* At this point we validate the Package and list of PackageItem, for the given validation criterias
@@ -226,7 +226,7 @@ public class Packer {
 
     public static void main(String[] args) {
         try {
-            System.out.println(Packer.pack("src/test/resources/example_input_violate_max_item"));
+            System.out.println(Packer.pack("src/test/resources/example_input_2"));
         } catch (APIException e) {
             System.out.println("Exception: " + e.getMessage());
         }

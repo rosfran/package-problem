@@ -18,15 +18,20 @@ import com.mobiquity.packer.domain.Package;
  **/
 public class DefaultPackageValidationService implements PackageValidationService {
 
+    /* Maximum capacity for a Package */
     private static final int MAX_CAPACITY = 100;
+    /* Maximum number of itens in a Package */
     private static final int MAX_ITENS = 15;
+    /* Maximum weight for an item */
     private static final int MAX_WEIGHT = 100;
+
+    /* Maximum cost for an item */
     private static final int MAX_COST = 100;
 
     /**
      * This method applies all 3 validation rules, creating dependencies between them using the linkWith function
-     * @param command
-     * @return
+     * @param command   This is the instance of the Package being analyzed for any constraint violation.
+     * @return          The result of processing a given Input. It says if the validation was successfull or not.
      */
     @Override
     public ValidationResult validate(Package command) {
