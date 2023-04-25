@@ -49,8 +49,26 @@ There are some ways to implement a solution using Knapsack. We can implement a r
 (it is a NP-Complete problem), but at least the algorithm runs polynomial on the magnitude of the input, but exponential in the size of the input.
 
 Dynamic programming is a strategy for trying to simplify problems that can be decoupled into sub-problems using some linnearization techniques. Otherwise exponentially-difficult programming problems. 
-The idea is to store use an Array the results of subproblems so that we do not have to re-compute them later.
+The idea is to store use an Array (or Matrix) the results of subproblems, so that we do not have to re-compute them later, solving the less complex subproblems first is the key for this solution to work.
 
 To use dynamic programming, we first create a 2-dimensional table with dimensions from 0 to n (where n is the iten's size) and 0 to W (where W is the capacity of a Package). 
 Then, we use a bottom-up approach to calculate the optimal solution with this table.
 
+## How to Run It
+
+Having the Maven installed, just type the following:
+
+- `mvn test`
+
+## Known Issues, Design Decisions and Lessons Learned
+
+1. The Knapsack 0/1 usually doesn't work with float (fractional) values, so I had to do some adjustments in the algorithm to handle that. It seems simple, but the weight, for example, is used as an index to the Matrix used in our dynamix programming technique.
+2. I decided to inovate a little bit, and applied a design pattern called Chain of Responsibility is a behavioral design pattern that lets you pass requests along a chain of handlers. This is a very good pattern when handling a sequence of Validations, for example;
+3. We applied a Test Driven Development (TDD), creating the tests first, and defining the constraints in the tests as much as I could, doing this before moving to the real implementation. All tests are developed using JUnit 5.
+4. The only exported API method is the Packer.pack. We surely need to know better, from the developer/customer perspective, or from the product requirements, if we need something else accessible from API vicinity.
+
+# References
+1. Knapsack problem description: https://en.wikipedia.org/wiki/Knapsack_problem
+2. A Dynamic Solution to Knapsack 0/1: https://www.personal.kent.edu/~rmuhamma/Algorithms/MyAlgorithms/Dynamic/knapsackdyn.htm
+3. Lectures Explaining Knapasck 0/1 Dynamic Programming Approach: http://cse.unl.edu/~goddard/Courses/CSCE310J/Lectures/Lecture8-DynamicProgramming.pdf
+4. Chain of Responsibility - Design Pattern: https://refactoring.guru/design-patterns/chain-of-responsibility
