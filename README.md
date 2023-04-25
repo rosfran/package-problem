@@ -35,7 +35,7 @@ The Class Diagram is as following:
 - `com.mobiquity.packer.domain.Package`: it is a class describing the Package. A Package can be seen as a Bag, where you have the Package capacity (maximum amount of weights for all the itens), and a list of itens (called PackageItem)
 - `com.mobiquity.packer.domain.PackageItem`: it represents an item inside a Package. A PackageItem has: unique ID, weight and a cost.
 
-![uml-diagram](/Users/rosfranlinsborges/dev/Mobiquity/skeleton_java/docs/package-challenge.png)
+![uml-diagram](./docs/package-challenge.png)
 
 ## Implementation
 
